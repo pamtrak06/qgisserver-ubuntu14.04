@@ -25,7 +25,7 @@ docker build -t pamtrak06/qgisserver-ubuntu14.04 https://github.com/pamtrak06/qg
 
 Run container
 ```
-$ docker run -d -p 80:80 -p 22:22 pamtrak06/rok4-ubuntu14.04
+$ docker run -d -p 80:80 -p 22:22 pamtrak06/qgisserver-ubuntu14.04 https://raw.githubusercontent.com/pamtrak06/qgisserver-ubuntu14.04/master/Dockerfile
 ```
 
 Open a terminal session on a running container

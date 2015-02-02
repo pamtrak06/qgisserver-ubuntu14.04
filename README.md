@@ -46,26 +46,25 @@ $ boot2Docker ip => 192.168.59.103
 
 # Configure qgis server
 
-Editez le fichier /usr/lib/cgi-bin/wms_metadata.xml, et modifiez les metadonnées (non obligatoire).
-Créez un sous-répertoire dans /usr/lib.cgi-bin/ du nom de votre projet (ex: world/).
-Copier votre projet .qgs sur le serveur (dans /var/www/data/world.qgs par exemple), acoompagné des données (SHP, ou s'il s'agit de données en BDD, il faut biensur avoir la base accessible).
-Exécutez ensuite les commandes suivantes :
+Edit the /usr/lib/cgi-bin/wms_metadata.xml file and edit the metadata (not mandatory).
+Create a subdirectory in /usr/lib.cgi-bin/ with the name of your project.
+Copy your project on the server (in /var/www/data/<project name>.qgs, with data (SHP, or if there is data in database, it must be accessible). Then run the following commands:
 
 ```
-$ cd /usr/lib/cgi-bin/world/
-$ ln -s /var/www/data/world.qgs .
+$ cd /usr/lib/cgi-bin/<project name>/
+$ ln -s /var/www/data/<project name>.qgs .
 $ ln -s ../qgis_mapserv.fcgi .
 $ ln -s ../wms_metadata.xml .
 ```
 
 # Test qgis services
 
-Le serveur est prêt. Pour s'en assurer, tapez l'url suivante dans un navigateur :
+Server is ready, test following url :
+http://{docker ip}/cgi-bin/<project name>/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities
 
-http://{docker ip}/cgi-bin/world/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities
-Cette requête doit vous retourner un XML de description des couches disponibles.
-Le service peut alors être appelé suivant le protocole WMS depuis n'importe quel client.
-Les couches disponibles sont celle que vous avez défini dans votre projet QGis.
+This request must return an XML description of available layers.
+The service can be called according to the WMS protocol from any client.
+The layers are available that you set in your QGis project.
 
 For more information about configuration, see http://www.makina-corpus.org/blog/qgis-server-premiers-pas
 

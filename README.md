@@ -13,7 +13,7 @@ Installation procedure are comming from several sites :
 
 #How to use this image
 
-##Build rok4 docker image
+##Build qgis server docker image
 
 This image is built under ubuntu 14.04.
 
@@ -21,7 +21,7 @@ This image is built under ubuntu 14.04.
 docker build -t pamtrak06/qgisserver-ubuntu14.04 https://github.com/pamtrak06/qgisserver-ubuntu14.04.git
 ```
 
-## Run rok4 docker container
+## Run qgis server docker container
 
 Run container
 ```

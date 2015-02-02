@@ -31,7 +31,7 @@ $ docker run -d -p 80:80 -p 22:22 pamtrak06/qgisserver-ubuntu14.04 https://raw.g
 Open a terminal session on a running container
 ```
 $ docker ps
-$ docker exec -i -t pamtrak06/rok4-ubuntu14.04 /bin/bash
+$ docker exec -i -t pamtrak06/qgisserver-ubuntu14.04 /bin/bash
 ```
 
 Exit container without stop it

@@ -71,3 +71,8 @@ For more information about configuration, see http://www.makina-corpus.org/blog/
 # Licence
 
 http://docs.qgis.org/2.6/fr/docs/user_manual/appendices/appendices.html#gnu-general-public-license
+
+## Docker utility
+
+For easy use of docker command, try [edocker](https://github.com/pamtrak06/edocker).
+Create your edocker.cfg configuration file (parameters for most used docker commands ) and then use edocker<command> in any docker working project container those configuration file !
